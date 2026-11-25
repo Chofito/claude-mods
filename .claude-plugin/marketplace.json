@@ -1,0 +1,16 @@
+{
+  "name": "chofito-mods",
+  "owner": {
+    "name": "chofito"
+  },
+  "metadata": {
+    "description": "chofito's Claude Code mods"
+  },
+  "plugins": [
+    {
+      "name": "usage-hud",
+      "source": "./mods/usage-hud",
+      "description": "A HUD above the prompt: turn, context, prompt-cache countdown, 5h/weekly limits with pace and reset countdown, and cost."
+    }
+  ]
+}

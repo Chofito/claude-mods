@@ -1,0 +1,52 @@
+{
+  "name": "usage-hud",
+  "version": "0.9.0",
+  "description": "A HUD above the prompt: turn, context window, prompt-cache TTL countdown, 5-hour and weekly limits with reset countdown, and session cost — with colors and animations that change as you go.",
+  "author": {
+    "name": "chofito"
+  },
+  "keywords": [
+    "mod",
+    "usage",
+    "context",
+    "cache",
+    "rate-limits",
+    "cost",
+    "hud"
+  ],
+  "userConfig": {
+    "terminal_icons": {
+      "type": "string",
+      "title": "Terminal icons",
+      "description": "nerd: Nerd Font icons (needs a Nerd Font in your terminal). unicode: plain symbols that work in any font. emoji: bigger, colored icons, two cells each.",
+      "default": "emoji",
+      "options": [
+        "nerd",
+        "unicode",
+        "emoji"
+      ]
+    },
+    "terminal_style": {
+      "type": "string",
+      "title": "Terminal style",
+      "description": "minimal: one bare row, ▰▱ meters, the session at the left and the limits at the right. card: a rounded box with icon badges (3 rows). line: the card's row without the box.",
+      "default": "minimal",
+      "options": [
+        "minimal",
+        "card",
+        "line"
+      ]
+    },
+    "cache_ttl": {
+      "type": "string",
+      "title": "Prompt cache TTL",
+      "description": "How long the main conversation's prompt cache lives after each response. auto: 1h on a subscription within its plan, 5m on usage credits, an API key or a cloud provider (Claude Code's defaults). Set 5m or 1h if you changed promptCacheTtl or a TTL env var. A /model switch reports the real one and the HUD adopts it.",
+      "default": "auto",
+      "options": [
+        "auto",
+        "5m",
+        "1h"
+      ]
+    }
+  }
+}

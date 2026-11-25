@@ -1,0 +1,21 @@
+{
+  "name": "claude-mods",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/dev.ts",
+    "preview": "bun scripts/preview.ts",
+    "check": "bun run typecheck && bun run validate && bun run test",
+    "typecheck": "tsc -p .",
+    "validate": "bun scripts/each-mod.ts validate",
+    "test": "bun scripts/each-mod.ts test",
+    "link": "bun scripts/install.ts link",
+    "unlink": "bun scripts/install.ts unlink",
+    "install-mods": "bun scripts/install.ts marketplace",
+    "new": "bun scripts/new-mod.ts",
+    "types:update": "bun scripts/update-types.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}
